@@ -1,0 +1,64 @@
+{
+  "name": "Disparosimples",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -32
+      ],
+      "id": "",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "resource": "messages-api",
+        "instanceName": "whasedu",
+        "remoteJid": "@s.whatsapp.net",
+        "messageText": "teste?",
+        "options_message": {}
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        192,
+        -96
+      ],
+      "id": "4b4ec56b-3254-4997-a6db-988dd48906f0",
+      "name": "mensagem whats",
+      "credentials": {
+        "evolutionApi": {
+          "id": "",
+          "name": "Evolution account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "mensagem whats",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1d3148c2-9709-43f7-9e63-ee4774cf3e35",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3d2241a931a41caca7ba8f38cf7f8543bef4654d8031ea7e7f027085ba9a77a6"
+  },
+  "id": "pkpA9e3qVi4E5fjs",
+  "tags": []
+}
